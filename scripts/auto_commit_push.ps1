@@ -1,5 +1,5 @@
-$repo = "D:\mirmironnnn oxirgiiii\Unreal Engine\Unreal Engine\Muslimatun"
-Set-Location $repo
+$repo = Split-Path -Parent $PSScriptRoot
+Set-Location -LiteralPath $repo
 
 git add -A *> $null
 
@@ -9,6 +9,6 @@ if ([string]::IsNullOrWhiteSpace($staged)) {
 }
 
 $msg = "Auto session update $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-git -c user.name="Odilbek" -c user.email="odilovislombek10@gmail.com" commit -m $msg *> $null
+git -c user.name="Codex" -c user.email="codex@example.local" commit -m $msg *> $null
 git push origin main *> $null
 exit 0
